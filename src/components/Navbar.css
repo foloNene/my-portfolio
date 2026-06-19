@@ -18,13 +18,30 @@
   height: 68px;
 }
  
-.navbar__logo {
+/* .navbar__logo {
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--color-accent);
   letter-spacing: -0.5px;
-}
+} */
  
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.5px;
+}
+
+.navbar__logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.navbar__logo:hover img {
+  opacity: 0.85;
+}
+
 .navbar__links {
   list-style: none;
   display: flex;

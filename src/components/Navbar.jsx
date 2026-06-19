@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import './Navbar.css'
+import OlaideImage from '../assets/OlaideImage.jpeg'
+import OlaideLogo from '../assets/olaide-adebanjo-logo-white.svg'
+
+
+
  
 // Navigation links array — easy to add or remove links
 const navLinks = [
@@ -40,7 +45,8 @@ function Navbar() {
         {/* LOGO / BRAND NAME */}
         <a href='#hero' className='navbar__logo'>
 
-          &lt;OlaideAdebanjo /&gt;
+          {/* &lt;OlaideAdebanjo /&gt; */}
+               <img className='navbar__logo-img' src={OlaideLogo} alt="Olaide Adebanjo" />
         </a>
  
         {/* DESKTOP NAVIGATION LINKS */}

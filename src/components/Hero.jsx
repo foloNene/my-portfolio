@@ -1,6 +1,8 @@
 
 import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa'
 import './Hero.css'
+import OlaideImage from '../assets/OlaideImage.jpeg'
+
  
 function Hero() {
   return (
@@ -10,7 +12,7 @@ function Hero() {
         {/* LEFT: Text Content */}
         <div className='hero__content'>
           <p className='hero__greeting'>Hello, I am</p>
-          <h1 className='hero__name'>Firstname Lastname</h1>
+          <h1 className='hero__name'>Olaide Adebanjo</h1>
           <h2 className='hero__title'>
             React.js Developer &amp; Frontend Engineer
           </h2>
@@ -56,7 +58,8 @@ function Hero() {
         {/* RIGHT: Avatar / Photo */}
         <div className='hero__image-wrap'>
           <div className='hero__avatar'>
-            <span className='hero__avatar-initials'>YN</span>
+            {/* <span className='hero__avatar-initials'>YN</span> */}
+                <img className='hero__avatar-initials' src={OlaideImage} alt="" />
           </div>
         </div>
  
