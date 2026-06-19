@@ -40,7 +40,7 @@ function Navbar() {
         {/* LOGO / BRAND NAME */}
         <a href='#hero' className='navbar__logo'>
 
-          &lt;YourName /&gt;
+          &lt;OlaideAdebanjo /&gt;
         </a>
  
         {/* DESKTOP NAVIGATION LINKS */}
