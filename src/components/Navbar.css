@@ -1,0 +1,102 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background-color: var(--color-primary);
+  transition: box-shadow var(--transition), background-color var(--transition);
+}
+
+.navbar--scrolled {
+  background-color: rgba(27, 42, 74, 0.97);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+ 
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+ 
+.navbar__logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: -0.5px;
+}
+ 
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+ 
+.navbar__link {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color var(--transition);
+}
+ 
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition);
+}
+ 
+.navbar__link:hover { color: var(--color-accent); }
+.navbar__link:hover::after { width: 100%; }
+ 
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+ 
+/* MOBILE MENU */
+.navbar__mobile {
+  display: none;
+
+  flex-direction: column;
+  background-color: var(--color-primary);
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+ 
+.navbar__mobile--open {
+  display: flex;
+  max-height: 400px;
+  padding: 1rem 0;
+}
+ 
+.navbar__mobile-link {
+  color: var(--color-white);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background-color var(--transition);
+}
+ 
+.navbar__mobile-link:hover {
+  background-color: rgba(245, 166, 35, 0.12);
+  color: var(--color-accent);
+}
+ 
+/* RESPONSIVE: Show hamburger on small screens */
+@media (max-width: 768px) {
+  .navbar__links { display: none; }
+  .navbar__hamburger { display: block; }
+  .navbar__mobile { display: flex; }
+}
+

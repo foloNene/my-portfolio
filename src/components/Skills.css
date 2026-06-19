@@ -1,0 +1,79 @@
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+ 
+.skills__category-title {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+
+  border-bottom: 2px solid var(--color-accent);
+}
+ 
+/* Skill Progress Bar */
+.skill-bar { margin-bottom: 1.2rem; }
+ 
+.skill-bar__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+ 
+.skill-bar__icon { color: var(--color-teal); font-size: 1rem; }
+ 
+.skill-bar__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  flex: 1;
+  color: var(--color-dark-text);
+}
+ 
+.skill-bar__percent {
+  font-size: 0.8rem;
+  color: var(--color-grey-text);
+}
+ 
+.skill-bar__track {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 99px;
+  overflow: hidden;
+}
+ 
+.skill-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-teal), var(--color-accent));
+  border-radius: 99px;
+  transition: width 1.2s ease;
+}
+ 
+/* Soft skill badges */
+.skills__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+ 
+.skills__badge {
+  background: var(--color-light-bg);
+  color: var(--color-primary);
+  border: 1px solid var(--color-midGrey, #D0D7E2);
+  border-radius: 99px;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .skills__grid { grid-template-columns: 1fr 1fr; }
+}
+ 
+@media (max-width: 768px) {
+  .skills__grid { grid-template-columns: 1fr; }
+}
+
