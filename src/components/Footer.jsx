@@ -1,6 +1,7 @@
 
 import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa'
 import './Footer.css'
+import OlaideLogo from '../assets/olaide-adebanjo-logo-white.svg'
  
 function Footer() {
   const year = new Date().getFullYear()
@@ -11,7 +12,9 @@ function Footer() {
  
         {/* LEFT: Branding */}
         <div className='footer__brand'>
-          <a href='#hero' className='footer__logo'>&lt;YourName /&gt;</a>
+          <a href='#hero' className='footer__logo'>
+            <img className='navbar__logo-img' src={OlaideLogo} alt="Olaide Adebanjo" />
+          </a>
           <p className='footer__tagline'>
             Building the web, one component at a time.
           </p>
@@ -42,7 +45,7 @@ function Footer() {
       {/* BOTTOM BAR */}
       <div className='footer__bottom'>
         <p>
-          &copy; {year} YourName. Built with{' '}
+          &copy; {year} OlaideAdebanjo. Built with{' '}
           <FaHeart className='footer__heart' /> using React.js
         </p>
       </div>
